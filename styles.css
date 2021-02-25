@@ -45,14 +45,38 @@ p:last-of-type {
   margin-bottom: 0;
 }
 
+/**
+ * Moogle
+ */
+
+.moogle__header,
+.moogle__content,
+.moogle__footer {
+  margin: 1rem auto;
+  padding: 0 1rem;
+  background-color: white;
+}
+
+.moogle__header {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.moogle__footer {
+  border-bottom-right-radius: 1rem;
+}
+
 .moogle__container {
   padding: 1rem 0;
-  margin: 0 auto;
 }
 
 .moogle__link {
   color: #750a10;
 }
+
+/**
+ * Kupo
+ */
 
 .kupo {
   opacity: 0;
@@ -63,11 +87,37 @@ p:last-of-type {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(51, 35, 98, 0.6);
+}
+
+.kupo__inner {
+  max-width: 60vw;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 1rem;
 }
 
 .kupo__active {
   opacity: 1;
   visibility: visible;
   pointer-events: all;
+}
+
+.kupo__header,
+.kupo__content,
+.kupo__footer {
+  margin: 1rem auto;
+  padding: 0 1rem;
+}
+
+.kupo__header {
+  margin-top: 0;
+}
+
+.kupo__footer {
+  margin-bottom: 0;
+}
+
+.kupo__container {
+  padding: 1rem 0;
 }
