@@ -37,6 +37,12 @@ body {
   color: #332362;
 }
 
+@media (max-width: 767px) {
+  body {
+    max-width: 90vw;
+  }
+}
+
 p {
   margin-bottom: 1rem;
 }
@@ -111,6 +117,12 @@ p:last-of-type {
   margin: 0 auto;
   background-color: white;
   border-radius: 1rem;
+}
+
+@media (max-width: 767px) {
+  .kupo__inner {
+    max-width: 90vw;
+  }
 }
 
 .kupo__active {
