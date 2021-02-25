@@ -78,6 +78,17 @@ p:last-of-type {
   color: #750a10;
 }
 
+.moogle__button {
+  background-color: #332362;
+  color: white;
+  border: none;
+  padding: 0.4rem;
+}
+
+.moogle__button:focus {
+  outline: #d2cbc5 auto 1px;
+}
+
 /**
  * Kupo
  */
@@ -125,4 +136,17 @@ p:last-of-type {
 
 .kupo__container {
   padding: 1rem 0;
+}
+
+.kupo__button {
+  background-color: #750a10;
+  color: white;
+  border: none;
+  padding: 0.6rem;
+  border-bottom-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+}
+
+.kupo__button:focus {
+  outline: #d2cbc5 auto 1px;
 }
