@@ -32,16 +32,15 @@ html {
 body {
   max-width: 80vw;
   margin: 0 auto;
+  background-color: #d2cbc5;
+  color: #332362;
 }
 
-header, 
-section, 
-article, 
-footer {
+.moogle__header,
+.moogle__footer {
   margin: 2rem;
 }
 
-.button {
-  display: inline-block;
-  font-size: 2rem;
+.moogle__link {
+  color: #750a10;
 }
