@@ -13,16 +13,60 @@
 </head>
 <body>
   <header class="moogle__header">
-    <h1 class="moogle__heading">
-      Moogle.js
-    </h1>
+    <div class="moogle__container">
+      <h1 class="moogle__heading">
+        Moogle.js
+      </h1>
+    </div>
   </header>
 
+  <section class="moogle__content">
+    <div class="moogle__container">
+      <p>
+        Hello!
+      </p>
+
+      <p>
+        Thank you for checking out this simple JavaScript pop-up modal. I want to write something very simple and clean to test my skills.
+      </p>
+
+      <p>
+        <button id="kupo__open" class="moogle__button">
+          Kupo!
+        </button>
+      </p>
+    </div>
+  </section>
+
   <footer class="moogle__footer">
-    <p>
-      Made by <a href="https://kerrisharp.com" target="_blank" class="moogle__link">Kerri Sharp</a>
-    </p>
+    <div class="moogle__container">
+      <p>
+        Made by <a href="https://kerrisharp.com" target="_blank" class="moogle__link">Kerri Sharp</a>
+      </p>
+    </div>
   </footer>
+
+  <section id="kupo" class="kupo">
+    <div class="kupo__inner">
+      <header class="kupo__header">
+        <h2 class="kupo__heading">
+          Kupo!
+        </h2>
+      </header>
+
+      <article class="kupo__content">
+        <p>
+          Popup body content.
+        </p>
+      </article>
+
+      <footer class="kupo__footer">
+        <button id="kupo__close" class="kupo__button">
+          x
+        </button>
+      </footer>
+    </div>
+  </section>
 
   <script src="moogle.js"></script>
 </body>

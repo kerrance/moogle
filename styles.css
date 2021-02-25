@@ -27,6 +27,7 @@ select {
 
 html {
   height: 100vh;
+  position: relative;
 }
 
 body {
@@ -36,11 +37,37 @@ body {
   color: #332362;
 }
 
-.moogle__header,
-.moogle__footer {
-  margin: 2rem;
+p {
+  margin-bottom: 1rem;
+}
+
+p:last-of-type {
+  margin-bottom: 0;
+}
+
+.moogle__container {
+  padding: 1rem 0;
+  margin: 0 auto;
 }
 
 .moogle__link {
   color: #750a10;
+}
+
+.kupo {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.kupo__active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
 }
