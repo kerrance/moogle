@@ -109,11 +109,14 @@ p:last-of-type {
   right: 0;
   bottom: 0;
   left: 0;
+  display: flex;
+  align-items: center;
   background-color: rgba(51, 35, 98, 0.6);
 }
 
 .kupo__inner {
   max-width: 60vw;
+  flex: 1;
   margin: 0 auto;
   background-color: white;
   border-radius: 1rem;
