@@ -1,0 +1,172 @@
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+header,
+section,
+footer {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+input,
+button,
+textarea,
+select {
+  font-size: 22px;
+  font-family: Tahoma, sans-serif;
+  letter-spacing: -0.02rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+html {
+  height: 100vh;
+  position: relative;
+}
+
+body {
+  max-width: 80vw;
+  margin: 0 auto;
+  background-color: #d2cbc5;
+  color: #332362;
+}
+
+@media (max-width: 767px) {
+  body {
+    max-width: 90vw;
+  }
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+p:last-of-type {
+  margin-bottom: 0;
+}
+
+::selection {
+  background-color: #d2cbc5;
+}
+
+/**
+ * Moogle
+ */
+
+.moogle__header,
+.moogle__content,
+.moogle__footer {
+  margin: 1rem auto;
+  padding: 0 1rem;
+  background-color: white;
+}
+
+.moogle__header {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.moogle__footer {
+  border-bottom-right-radius: 1rem;
+}
+
+.moogle__container {
+  padding: 1rem 0;
+}
+
+.moogle__link {
+  color: #750a10;
+}
+
+.moogle__button {
+  background-color: #332362;
+  color: white;
+  border: none;
+  padding: 0.4rem;
+}
+
+.moogle__button:focus {
+  outline: #d2cbc5 auto 1px;
+}
+
+/**
+ * Kupo
+ */
+
+.kupo {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 0.5s ease;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  background-color: rgba(51, 35, 98, 0.6);
+}
+
+.kupo__inner {
+  max-width: 60vw;
+  flex: 1;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 1rem;
+}
+
+@media (max-width: 767px) {
+  .kupo__inner {
+    max-width: 90vw;
+  }
+}
+
+.kupo__active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+
+.kupo__header,
+.kupo__content,
+.kupo__footer {
+  margin: 1rem auto;
+  padding: 0 1rem;
+}
+
+.kupo__header {
+  margin-top: 0;
+}
+
+.kupo__content {
+  text-align: center;
+}
+
+.kupo__footer {
+  margin-bottom: 0;
+  text-align: right;
+}
+
+.kupo__container {
+  padding: 1rem 0;
+}
+
+.kupo__button {
+  background-color: #750a10;
+  color: white;
+  border: none;
+  padding: 0.6rem;
+  border-bottom-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+}
+
+.kupo__button:focus {
+  outline: #d2cbc5 auto 1px;
+}

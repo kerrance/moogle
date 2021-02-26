@@ -4,20 +4,75 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#332362">
   <title>Moogle.js</title>
   <meta name="description" content="Simple JS pop-up modal, kupo!">
   <meta itemprop="name" content="Moogle.js">
   <meta itemprop="description" content="Simple JS pop-up modal, kupo!">
-  <link href="kupo.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
 </head>
 <body>
-  <header>Moogle.js</header>
+  <header class="moogle__header">
+    <div class="moogle__container">
+      <h1 class="moogle__heading">
+        Moogle.js
+      </h1>
+    </div>
+  </header>
 
-  <footer>
-    <p>
-      Made by <a href="https://kerrisharp.com" target="_blank">Kerri Sharp</a>
-    </p>
+  <section class="moogle__content">
+    <div class="moogle__container">
+      <p>
+        Hello!
+      </p>
+
+      <p>
+        Thank you for checking out this simple JavaScript pop-up modal. I want to write something very simple and clean to test my skills.
+      </p>
+
+      <p>
+        <button id="kupo__open" class="moogle__button">
+          Kupo!
+        </button>
+      </p>
+    </div>
+  </section>
+
+  <footer class="moogle__footer">
+    <div class="moogle__container">
+      <p>
+        Made by <a href="https://kerrisharp.com" target="_blank" class="moogle__link">Kerri Sharp</a>
+      </p>
+    </div>
   </footer>
+
+  <section id="kupo" class="kupo">
+    <div class="kupo__inner">
+      <header class="kupo__header">
+        <div class="kupo__container">
+          <h2 class="kupo__heading">
+            Kupo!
+          </h2>
+        </div>
+      </header>
+
+      <article class="kupo__content">
+        <div class="kupo__container">
+          <p>
+            Popup body content.
+          </p>
+        </div>
+      </article>
+
+      <footer class="kupo__footer">
+        <div class="kupo__container">
+          <button id="kupo__close" class="kupo__button">
+            Close
+          </button>
+        </div>
+      </footer>
+    </div>
+  </section>
 
   <script src="moogle.js"></script>
 </body>
