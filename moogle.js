@@ -21,6 +21,12 @@
   function eventListener() {
     showPopupButton.addEventListener('click', showPopup);
     closePopupButton.addEventListener('click', hidePopup);
+
+    document.onclick = function(event) {
+      if (event.target === popup) {
+        hidePopup();
+      }
+    };
   }
 
   function initMoogle() {
