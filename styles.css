@@ -65,6 +65,7 @@ p:last-of-type {
   margin: 1rem auto;
   padding: 0 1rem;
   background-color: white;
+  border: #332362 solid 0.2rem;
 }
 
 .moogle__header {
@@ -119,6 +120,7 @@ p:last-of-type {
   flex: 1;
   margin: 0 auto;
   background-color: white;
+  border: #750a10 solid 0.2rem;
   border-radius: 1rem;
 }
 
@@ -139,6 +141,7 @@ p:last-of-type {
 .kupo__footer {
   margin: 1rem auto;
   padding: 0 1rem;
+  color: #750A10;
 }
 
 .kupo__header {
