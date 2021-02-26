@@ -33,6 +33,7 @@ html {
 body {
   max-width: 80vw;
   margin: 0 auto;
+  padding: 1rem 0;
   background-color: #d2cbc5;
   color: #332362;
 }
@@ -71,10 +72,12 @@ p:last-of-type {
 .moogle__header {
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
+  margin-top: 0;
 }
 
 .moogle__footer {
   border-bottom-right-radius: 1rem;
+  margin-bottom: 0;
 }
 
 .moogle__container {
