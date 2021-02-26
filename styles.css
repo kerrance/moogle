@@ -104,15 +104,16 @@ p:last-of-type {
  */
 
 .kupo {
+  width: 100vw;
+  height: 100vh;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
   transition: all 0.5s ease;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
   background-color: rgba(51, 35, 98, 0.6);
