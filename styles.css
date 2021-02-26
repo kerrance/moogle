@@ -25,14 +25,10 @@ select {
   scroll-behavior: smooth;
 }
 
-html {
-  height: 100vh;
-  position: relative;
-}
-
 body {
   max-width: 80vw;
   margin: 0 auto;
+  padding: 1rem 0;
   background-color: #d2cbc5;
   color: #332362;
 }
@@ -71,10 +67,12 @@ p:last-of-type {
 .moogle__header {
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
+  margin-top: 0;
 }
 
 .moogle__footer {
   border-bottom-right-radius: 1rem;
+  margin-bottom: 0;
 }
 
 .moogle__container {
@@ -83,6 +81,7 @@ p:last-of-type {
 
 .moogle__link {
   color: #750a10;
+  font-weight: bold;
 }
 
 .moogle__button {
@@ -96,20 +95,31 @@ p:last-of-type {
   outline: #d2cbc5 auto 1px;
 }
 
+.moogle__horizontal-rule {
+  border: none;
+  border-top: #332362 solid 0.2rem;
+  margin: 1rem auto;
+}
+
+.moogle__list:last-of-type {
+  margin-bottom: 0;
+}
+
 /**
  * Kupo
  */
 
 .kupo {
+  width: 100vw;
+  height: 100vh;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
   transition: all 0.5s ease;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
   background-color: rgba(51, 35, 98, 0.6);
@@ -144,12 +154,21 @@ p:last-of-type {
   color: #750A10;
 }
 
+@media (max-width: 767px) {
+  .kupo__header,
+  .kupo__content,
+  .kupo__footer {
+    margin: 0.4rem auto;
+    padding: 0 0.4rem;
+  }
+}
+
 .kupo__header {
   margin-top: 0;
 }
 
 .kupo__content {
-  text-align: center;
+  margin: 0;
 }
 
 .kupo__footer {
@@ -159,6 +178,12 @@ p:last-of-type {
 
 .kupo__container {
   padding: 1rem 0;
+}
+
+@media (max-width: 767px) {
+  .kupo__container {
+    padding: 0.4rem 0;
+  }
 }
 
 .kupo__button {
