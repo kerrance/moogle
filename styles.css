@@ -81,6 +81,7 @@ p:last-of-type {
 
 .moogle__link {
   color: #750a10;
+  font-weight: bold;
 }
 
 .moogle__button {
