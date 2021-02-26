@@ -95,6 +95,16 @@ p:last-of-type {
   outline: #d2cbc5 auto 1px;
 }
 
+.moogle__horizontal-rule {
+  border: none;
+  border-top: #332362 solid 0.2rem;
+  margin: 1rem auto;
+}
+
+.moogle__list:last-of-type {
+  margin-bottom: 0;
+}
+
 /**
  * Kupo
  */
@@ -144,12 +154,21 @@ p:last-of-type {
   color: #750A10;
 }
 
+@media (max-width: 767px) {
+  .kupo__header,
+  .kupo__content,
+  .kupo__footer {
+    margin: 0.4rem auto;
+    padding: 0 0.4rem;
+  }
+}
+
 .kupo__header {
   margin-top: 0;
 }
 
 .kupo__content {
-  text-align: center;
+  margin: 0;
 }
 
 .kupo__footer {
@@ -159,6 +178,12 @@ p:last-of-type {
 
 .kupo__container {
   padding: 1rem 0;
+}
+
+@media (max-width: 767px) {
+  .kupo__container {
+    padding: 0.4rem 0;
+  }
 }
 
 .kupo__button {
