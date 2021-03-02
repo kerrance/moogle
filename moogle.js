@@ -1,8 +1,8 @@
 /**
  * Moogle.js
- * 
+ *
  * Version: 1.0.0
- * 
+ *
  * Website: https://kerrance.github.io/moogle/
  */
 ( function() {
@@ -22,6 +22,11 @@
     alreadyShown = true;
   }
 
+  function explicitlyDismissPopup() {
+    setCookie('kupoExplicitlyDismissed', true, 28);
+    hidePopup();
+  }
+
   function showPopupOnScroll() {
     if (alreadyShown !== true) {
       if ((rootElement.scrollTop / scrollTotal) > 0.6) {
@@ -30,10 +35,39 @@
     }
   }
 
+  function setCookie(name, value, daysToLive) {
+    if(typeof daysToLive === 'number') {
+      let date = new Date();
+      date.setTime(date.getTime() + (daysToLive*24*60*60*1000));
+      let expires = '; expires=' + date.toUTCString();
+
+      document.cookie = name + '=' + encodeURIComponent(value) + expires + '; path=/; secure';
+    }
+  }
+
+  function getCookie(name) {
+    const allCookies = document.cookie.split(';');
+
+    for(let i = 0; i < allCookies.length; i++) {
+      const cookiePair = allCookies[i].split('=');
+
+      if(name === cookiePair[0].trim()) {
+        return decodeURIComponent(cookiePair[1]);
+      }
+    }
+
+    return null;
+  }
+
   function eventListener() {
     showPopupButton.addEventListener('click', showPopup);
-    closePopupButton.addEventListener('click', hidePopup);
-    document.addEventListener('scroll', showPopupOnScroll);
+    closePopupButton.addEventListener('click', explicitlyDismissPopup);
+
+    const explicitlyDismissedPopup = getCookie('kupoExplicitlyDismissed');
+
+    if (explicitlyDismissedPopup !== '' && explicitlyDismissedPopup === true) {
+      document.addEventListener('scroll', showPopupOnScroll);
+    }
 
     rootElement.onclick = function(event) {
       if (event.target === popup) {
