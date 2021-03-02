@@ -22,6 +22,11 @@
     alreadyShown = true;
   }
 
+  function explicitlyDismissPopup() {
+    setCookie('kupoExplicitlyDismissed', true, 28);
+    hidePopup();
+  }
+
   function showPopupOnScroll() {
     if (alreadyShown !== true) {
       if ((rootElement.scrollTop / scrollTotal) > 0.6) {
@@ -30,9 +35,19 @@
     }
   }
 
+  function setCookie(name, value, daysToLive) {
+    if(typeof daysToLive === 'number') {
+      let date = new Date();
+      date.setTime(date.getTime() + (daysToLive*24*60*60*1000));
+      let expires = '; expires=' + date.toUTCString();
+
+      document.cookie = name + '=' + encodeURIComponent(value) + expires + '; path=/; secure';
+    }
+  }
+
   function eventListener() {
     showPopupButton.addEventListener('click', showPopup);
-    closePopupButton.addEventListener('click', hidePopup);
+    closePopupButton.addEventListener('click', explicitlyDismissPopup);
     document.addEventListener('scroll', showPopupOnScroll);
 
     rootElement.onclick = function(event) {
