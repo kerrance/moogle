@@ -65,7 +65,7 @@
 
     const explicitlyDismissedPopup = getCookie('kupoExplicitlyDismissed');
 
-    if (explicitlyDismissedPopup !== '' && explicitlyDismissedPopup === true) {
+    if (explicitlyDismissedPopup !== null && explicitlyDismissedPopup === true) {
       document.addEventListener('scroll', showPopupOnScroll);
     }
 
