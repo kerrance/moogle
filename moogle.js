@@ -45,10 +45,29 @@
     }
   }
 
+  function getCookie(name) {
+    const allCookies = document.cookie.split(';');
+
+    for(let i = 0; i < allCookies.length; i++) {
+      const cookiePair = allCookies[i].split('=');
+
+      if(name === cookiePair[0].trim()) {
+        return decodeURIComponent(cookiePair[1]);
+      }
+    }
+
+    return null;
+  }
+
   function eventListener() {
     showPopupButton.addEventListener('click', showPopup);
     closePopupButton.addEventListener('click', explicitlyDismissPopup);
-    document.addEventListener('scroll', showPopupOnScroll);
+
+    const explicitlyDismissedPopup = getCookie('kupoExplicitlyDismissed');
+
+    if (explicitlyDismissedPopup !== '' && explicitlyDismissedPopup === true) {
+      document.addEventListener('scroll', showPopupOnScroll);
+    }
 
     rootElement.onclick = function(event) {
       if (event.target === popup) {
